@@ -13,13 +13,13 @@
 
 
 
-  <link rel="stylesheet" href="{{asset('template/dist/assets/compiled/css/app.css')}}">
-  <link rel="stylesheet" href="{{asset('template/dist/assets/compiled/css/app-dark.css')}}">
-  <link rel="stylesheet" href="{{asset('template/dist/assets/compiled/css/iconly.css')}}">
+  <link rel="stylesheet" href="{{asset('dist/assets/compiled/css/app.css')}}">
+  <link rel="stylesheet" href="{{asset('dist/assets/compiled/css/app-dark.css')}}">
+  <link rel="stylesheet" href="{{asset('dist/assets/compiled/css/iconly.css')}}">
 </head>
 
 <body>
-    <script src="{{asset('template/dist/assets/static/js/initTheme.js')}}"></script>
+    <script src="{{asset('dist/assets/static/js/initTheme.js')}}"></script>
     <div id="app">
         <div id="sidebar">
             <div class="sidebar-wrapper active">
@@ -987,17 +987,17 @@
 </footer>
         </div>
     </div>
-    <script src="assets/static/js/components/dark.js"></script>
-    <script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="{{asset('dist/assets/static/js/components/dark.js')}}"></script>
+    <script src="{{asset('dist/assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
 
 
-    <script src="assets/compiled/js/app.js"></script>
+    <script src="{{asset('dist/assets/compiled/js/app.js')}}"></script>
 
 
 
 <!-- Need: Apexcharts -->
-<script src="assets/extensions/apexcharts/apexcharts.min.js"></script>
-<script src="assets/static/js/pages/dashboard.js"></script>
+<script src="{{asset('dist/assets/extensions/apexcharts/apexcharts.min.js')}}"></script>
+<script src="{{asset('dist/assets/static/js/pages/dashboard.js')}}"></script>
 
 </body>
 
