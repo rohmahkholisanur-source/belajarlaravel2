@@ -2,7 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\AlatController;
 
+Route::resource('alats', AlatController::class);
+
+Route::resource('mahasiswa', MahasiswaController::class)->name('mahasiswa', 'mahasiswa');
 Route::get('/', function () {
     return view('app');
 });
