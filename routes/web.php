@@ -6,6 +6,7 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\AlatController;
 
 Route::resource('alats', AlatController::class);
+Route::get('/alats/{alat}', [AlatController::class, 'show'])->name('alats.show');
 
 Route::resource('mahasiswa', MahasiswaController::class)->name('mahasiswa', 'mahasiswa');
 Route::get('/', function () {

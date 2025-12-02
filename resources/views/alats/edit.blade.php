@@ -18,7 +18,9 @@
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('alats.update', $alat) }}" method="POST">
+                    @csrf
                     @method('PUT')
+
                     @include('alats._form')
 
                     <div class="mt-3">

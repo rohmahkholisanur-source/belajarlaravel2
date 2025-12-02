@@ -54,4 +54,8 @@ class AlatController extends Controller
         $alat->delete();
         return redirect()->route('alats.index')->with('success', 'Data alat berhasil dihapus.');
     }
+    public function show(Alat $alat)
+    {
+        return view('alats.show', compact('alat'));
+    }
 }

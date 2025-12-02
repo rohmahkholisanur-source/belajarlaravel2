@@ -12,7 +12,8 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>ID</th>
+                <th>Nomor</th>
+                <th>ID Alat</th>
                 <th>Nama Alat</th>
                 <th>Merek</th>
                 <th>Nomor Seri</th>
@@ -23,12 +24,14 @@
         <tbody>
             @foreach ($alats as $alat)
                 <tr>
-                    <td>{{ $alat->id }}</td>
-                    <td>{{ $alat->nama_alat }}</td>
-                    <td>{{ $alat->merek }}</td>
-                    <td>{{ $alat->nomor_seri }}</td>
-                    <td>{{ $alat->tanggal_instalasi }}</td>
+                    <td>{{ $loop->iteration }}</td>            {{-- Nomor urut --}}
+                    <td>{{ $alat->id }}</td>                    {{-- ID Alat --}}
+                    <td>{{ $alat->nama_alat }}</td>             {{-- Nama Alat --}}
+                    <td>{{ $alat->merek }}</td>                 {{-- Merek --}}
+                    <td>{{ $alat->nomor_seri }}</td>            {{-- Nomor Seri --}}
+                    <td>{{ $alat->tanggal_instalasi }}</td>     {{-- Tanggal Instalasi --}}
                     <td>
+                        <a href="{{ route('alats.show', $alat->id) }}" class="btn btn-info btn-sm">Lihat</a>
                         <a href="{{ route('alats.edit', $alat->id) }}" class="btn btn-warning btn-sm">Edit</a>
 
                         <form action="{{ route('alats.destroy', $alat->id) }}" method="POST" class="d-inline">

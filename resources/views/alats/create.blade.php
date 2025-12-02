@@ -18,6 +18,8 @@
         <div class="card">
             <div class="card-body">
                 <form action="{{ route('alats.store') }}" method="POST">
+                    @csrf
+
                     @include('alats._form')
 
                     <div class="mt-3">
